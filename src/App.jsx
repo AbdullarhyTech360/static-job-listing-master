@@ -10,7 +10,7 @@ function App() {
   const [searchItems, setSearchItems] = useState([]);
   const [original, setOriginal] = useState([]);
   useEffect(() => {
-    fetch('http://localhost:5173/Data/data.json').then(
+    fetch('/Data/data.json').then(
       (resp) => resp.json()
     ).then(
       (data) => {
