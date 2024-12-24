@@ -1,0 +1,194 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box !important;
+  font-family: "League Spartan", serif;
+  font-weight: normal;
+}
+
+.theme {
+  max-width: 100vw !important;
+  background: hsl(180, 29%, 50%);
+}
+.theme .desktop-header {
+  display: none;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+.container {
+  max-width: 100vw !important;
+  overflow: hidden !important;
+  display: grid;
+  place-content: center;
+}
+
+.inner-container {
+  max-width: 100vw !important;
+  height: 100vh;
+  overflow-x: hidden;
+}
+.inner-container #search-input {
+  background: white;
+  box-shadow: 0px 6px 14px 0px rgba(91, 164, 164, 0.3);
+  -webkit-box-shadow: 0px 6px 14px 0px rgba(91, 164, 164, 0.3);
+  -moz-box-shadow: 0px 6px 14px 0px rgba(91, 164, 164, 0.3);
+  height: -moz-fit-content;
+  height: fit-content;
+  border-radius: 5px;
+  width: 85%;
+  padding: 20px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  border: none;
+  width: 85%;
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  overflow: auto;
+}
+.inner-container #search-input .clear {
+  text-decoration: underline;
+  font-weight: bold;
+}
+.inner-container #search-input .clear:hover {
+  cursor: pointer;
+  color: hsl(180, 29%, 50%);
+}
+.inner-container #search-input .items {
+  display: flex;
+  -moz-column-gap: 15px;
+       column-gap: 15px;
+}
+.inner-container #search-input .search-item {
+  display: flex;
+}
+.inner-container #search-input .search-item .found-search {
+  font-weight: bold;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  display: flex;
+  align-items: center !important;
+  padding: 5px;
+  padding-top: 6px;
+  background: hsl(180, 31%, 95%);
+  color: hsl(180, 29%, 50%);
+  font-size: 0.8em;
+}
+.inner-container #search-input .search-item .remove-icon {
+  background: hsl(180, 29%, 50%);
+  padding: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.inner-container #search-input .search-item .remove-icon:hover {
+  cursor: pointer;
+  background: hsl(180, 14%, 20%);
+}
+.inner-container .main {
+  margin-bottom: 10px;
+  background: hsl(180, 52%, 96%);
+  padding-bottom: 10px;
+  display: grid;
+  place-items: center;
+}
+.inner-container .border-left {
+  border-left: 5px solid hsl(180, 29%, 50%);
+}
+.inner-container .card {
+  background: white;
+  box-shadow: 0px 6px 14px 0px rgba(91, 164, 164, 0.3);
+  -webkit-box-shadow: 0px 6px 14px 0px rgba(91, 164, 164, 0.3);
+  -moz-box-shadow: 0px 6px 14px 0px rgba(91, 164, 164, 0.3);
+  height: -moz-fit-content;
+  height: fit-content;
+  border-radius: 5px;
+  width: 85%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  margin-top: 70px;
+  padding: 15px;
+}
+.inner-container .card .card-svg {
+  border-radius: 50%;
+  scale: 0.6;
+  margin: -55px 0px 0px -18px;
+}
+.inner-container .card .dev-header {
+  margin-top: -15px;
+}
+.inner-container .card .dev-header .desc1 {
+  color: hsl(180, 29%, 50%);
+  font-weight: bold;
+  font-size: 0.9em;
+}
+.inner-container .card .dev-header .descs {
+  margin-left: 17px;
+}
+.inner-container .card .dev-header .desc2,
+.inner-container .card .dev-header .desc3 {
+  padding: 5px 9px;
+  border-radius: 15px;
+  background-color: hsl(180, 29%, 50%);
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.8em;
+}
+.inner-container .card .dev-header .desc3 {
+  background: hsl(180, 14%, 20%);
+  margin-left: 7px;
+}
+.inner-container .card h3 {
+  margin: 7px 0;
+  font-size: 0.9em;
+  font-weight: 700 !important;
+}
+.inner-container .card h3:hover {
+  cursor: pointer;
+  color: hsl(180, 29%, 50%);
+}
+.inner-container .card .dev-status {
+  border-bottom: 1px solid hsl(180, 8%, 52%);
+  padding-bottom: 20px;
+  display: flex;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+  color: hsl(180, 8%, 52%);
+  font-weight: bold;
+  font-size: 0.9em;
+}
+.inner-container .card .dev-status ul {
+  display: flex;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+}
+.inner-container .card .role {
+  box-sizing: border-box;
+  margin-top: -10px;
+}
+.inner-container .card .role span {
+  margin: 15px 18px 0px 0px;
+  width: -moz-fit-content;
+  width: fit-content;
+  text-align: center;
+  background: hsl(180, 31%, 95%);
+  padding: 5px;
+  display: inline-block;
+  color: hsl(180, 29%, 50%);
+  font-weight: 600;
+  border-radius: 5px;
+}
+.inner-container .card .role span:hover {
+  cursor: pointer;
+  color: hsl(180, 31%, 95%);
+  background: hsl(180, 29%, 50%);
+}/*# sourceMappingURL=style.css.map */

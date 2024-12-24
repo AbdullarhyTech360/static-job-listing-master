@@ -1,0 +1,197 @@
+// Primary color
+$dark-cyan: hsl(180, 29%, 50%);
+
+// Neutral colors
+$light-gray-bg: hsl(180, 52%, 96%);
+$light-gray-filter: hsl(180, 31%, 95%);
+$dark-gray-cyan: hsl(180, 8%, 52%);
+$very-dark: hsl(180, 14%, 20%);
+
+// Defining mixins
+@mixin card() {
+  background: white;
+  box-shadow: 0px 6px 14px 0px rgba($dark-cyan, 0.3);
+  -webkit-box-shadow: 0px 6px 14px 0px rgba($dark-cyan, 0.3);
+  -moz-box-shadow: 0px 6px 14px 0px rgba($dark-cyan, 0.3);
+  height: fit-content;
+  border-radius: 5px;
+  width: 85%;
+  padding: 20px;
+}
+
+// Elements styles
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box !important;
+  font-family: "League Spartan", serif;
+  font-weight: normal;
+}
+
+.theme {
+  max-width: 100vw !important;
+  background: $dark-cyan;
+  .desktop-header {
+    display: none;
+  }
+}
+
+body {
+  font-family: sans-serif;
+}
+
+.container {
+  max-width: 100vw !important;
+  overflow: hidden !important;
+  display: grid;
+  place-content: center;
+}
+
+.inner-container {
+  max-width: 100vw !important;
+  height: 100vh;
+  overflow-x: hidden;
+  #search-input {
+    @include card();
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    border: none;
+    width: 85%;
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    overflow: auto;
+    .clear {
+      text-decoration: underline;
+      font-weight: bold;
+      &:hover {
+        cursor: pointer;
+        color: $dark-cyan;
+      }
+    }
+    .items {
+      display: flex;
+      column-gap: 15px;
+    }
+    .search-item {
+      display: flex;
+      .found-search {
+        // border: 1px solid black !important;
+        font-weight: bold;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        display: flex;
+        align-items: center !important;
+        padding: 5px;
+        padding-top: 6px;
+        background: $light-gray-filter;
+        color: $dark-cyan;
+        font-size: 0.8em;
+      }
+      .remove-icon {
+        background: $dark-cyan;
+        padding: 5px;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &:hover {
+          cursor: pointer;
+          background: $very-dark;
+        }
+      }
+    }
+  }
+  .main {
+    margin-bottom: 10px;
+    background: $light-gray-bg;
+    padding-bottom: 10px;
+    display: grid;
+    place-items: center;
+  }
+  .border-left {
+    border-left: 5px solid $dark-cyan;
+  }
+  .card {
+    @include card();
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    margin-top: 70px;
+    padding: 15px;
+    .card-svg {
+      border-radius: 50%;
+      scale: 0.6;
+      margin: -55px 0px 0px -18px;
+    }
+    .dev-header {
+      margin-top: -15px;
+      .desc1 {
+        color: $dark-cyan;
+        font-weight: bold;
+        font-size: 0.9em;
+      }
+      .descs {
+        margin-left: 17px;
+      }
+      .desc2,
+      .desc3 {
+        padding: 5px 9px;
+        border-radius: 15px;
+        background-color: $dark-cyan;
+        color: white;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 0.8em;
+      }
+      .desc3 {
+        background: $very-dark;
+        margin-left: 7px;
+      }
+    }
+    h3 {
+      margin: 7px 0;
+      font-size: .9em;
+      font-weight: 700 !important;
+      &:hover {
+        cursor: pointer;
+        color: $dark-cyan;
+      }
+    }
+    .dev-status {
+      border-bottom: 1px solid $dark-gray-cyan;
+      padding-bottom: 20px;
+      display: flex;
+      column-gap: 30px;
+      color: $dark-gray-cyan;
+      font-weight: bold;
+      font-size: 0.9em;
+      ul {
+        display: flex;
+        column-gap: 30px;
+      }
+    }
+    .role {
+      box-sizing: border-box;
+      margin-top: -10px;
+      span {
+        margin: 15px 18px 0px 0px;
+        width: fit-content;
+        text-align: center;
+        background: $light-gray-filter;
+        padding: 5px;
+        display: inline-block;
+        color: $dark-cyan;
+        font-weight: 600;
+        border-radius: 5px;
+        &:hover {
+          cursor: pointer;
+          color: $light-gray-filter;
+          background: $dark-cyan;
+        }
+      }
+    }
+  }
+}
