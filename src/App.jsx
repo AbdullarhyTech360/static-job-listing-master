@@ -10,7 +10,7 @@ function App() {
   const [searchItems, setSearchItems] = useState([]);
   const [original, setOriginal] = useState([]);
   useEffect(() => {
-    fetch('/Data/data.json').then(
+    fetch('/static-job-listing-master/Data/data.json').then(
       (resp) => resp.json()
     ).then(
       (data) => {
